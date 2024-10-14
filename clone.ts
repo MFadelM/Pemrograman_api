@@ -33,3 +33,11 @@ console.log("Data dengan jenis 'SUV':", getDataByJenis('SUV'));
 // TODO 3: Dapatkan data dengan tahun tertentu
 const getDataByTahun = (tahun) => data.filter(car => car.tahun === tahun);
 console.log("Data dengan tahun 2020:", getDataByTahun(2020));
+
+// TODO 4: Dapatkan data dengan merek mobil tertentu
+const getDataByMerek = (merek) => data.filter(car => car.merek === merek);
+console.log("Data dengan merek 'Hyundai':", getDataByMerek('Hyundai'));
+
+// TODO 5: Dapatkan semua data mobil yang tahun produksinya di atas 2019
+const getDataByTahunAbove = (tahun) => data.filter(car => car.tahun > tahun);
+console.log("Data dengan tahun produksi di atas 2019:", getDataByTahunAbove(2019));
