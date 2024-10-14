@@ -1,56 +1,35 @@
 let data = [
-	{
-		id: 1,
-		name: 'John Doe',
-		hobbies: [
-			{
-				id: 1,
-				name: 'playing games',
-			},
-		],
-		age: 30,
-		address: '123 Main St',
-		city: 'New York',
-		phone: '555-1234',
-	},
-	{
-		id: 2,
-		name: 'Jane Smith',
-		age: 25,
-		address: '456 Oak Ave',
-		city: 'Los Angeles',
-		phone: '555-5678',
-	},
-	{
-		id: 3,
-		name: 'Michael Johnson',
-		age: 40,
-		address: '789 Pine Rd',
-		city: 'Chicago',
-		phone: '555-8765',
-	},
-	{
-		id: 4,
-		name: 'Emily Davis',
-		age: 35,
-		address: '321 Cedar St',
-		city: 'New York',
-		phone: '555-4321',
-	},
+    {
+        jenis: 'Sedan',
+        merek: 'Toyota',
+        tahun: 2020,
+        tipe: 'Camry',
+    },
+    {
+        jenis: 'SUV',
+        merek: 'Honda',
+        tahun: 2019,
+        tipe: 'CR-V',
+    },
+    {
+        jenis: 'Hatchback',
+        merek: 'Hyundai',
+        tahun: 2021,
+        tipe: 'i20',
+    }
 ];
 
-// TODO 1 : Dapatkan semua data
-const allData = data;
-console.log("Semua data:", allData);
+// Menampilkan semua data mobil dalam format tabel
+console.table(data);
 
-// TODO 2 : Dapatkan data dengan nama tertentu (misal, 'Jane Smith')
-const getDataByName = (name) => data.find(person => person.name === name);
-console.log("Data dengan nama Jane Smith:", getDataByName('Jane Smith'));
+// TODO 1: Dapatkan semua data dengan tipe mobil tertentu
+const getDataByType = (tipe) => data.find(car => car.tipe === tipe);
+console.log("Data dengan tipe 'Camry':", getDataByType('Camry'));
 
-// TODO 3 : Dapatkan data dengan alamat di New York
-const getDataByCity = (city) => data.filter(person => person.city === city);
-console.log("Data dengan alamat New York:", getDataByCity('New York'));
+// TODO 2: Dapatkan data dengan jenis mobil tertentu
+const getDataByJenis = (jenis) => data.filter(car => car.jenis === jenis);
+console.log("Data dengan jenis 'SUV':", getDataByJenis('SUV'));
 
-// TODO 4 : Dapatkan data dengan umur >= 30
-const getDataByAge = (age) => data.filter(person => person.age >= age);
-console.log("Data dengan umur >= 30:", getDataByAge(30));
+// TODO 3: Dapatkan data dengan tahun tertentu
+const getDataByTahun = (tahun) => data.filter(car => car.tahun === tahun);
+console.log("Data dengan tahun 2020:", getDataByTahun(2020));
